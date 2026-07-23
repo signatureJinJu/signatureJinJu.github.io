@@ -1,1 +1,669 @@
-<h1>welcome</h1>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOUCESTER | 전진주 PD - 글로벌 콘텐츠 전략가</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --color-bg: #FDFBF7;
+            --color-card-bg: #FAF6EE;
+            --color-burgundy: #5B1D28;
+            --color-burgundy-hover: #42131C;
+            --color-gold: #C5A059;
+            --color-gold-light: #E8D5B5;
+            --color-text-dark: #2B2625;
+            --color-text-muted: #6B625B;
+            --color-border: #E8E0D5;
+            --font-serif: 'Playfair Display', 'Cormorant Garamond', serif;
+            --font-script: 'Great Vibes', cursive;
+            --font-sans: 'Noto Sans KR', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text-dark);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--color-border);
+            position: sticky;
+            top: 0;
+            background-color: rgba(253, 251, 247, 0.95);
+            backdrop-filter: blur(8px);
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 24px;
+            letter-spacing: 3px;
+            color: var(--color-gold);
+            font-weight: 700;
+        }
+
+        .menu-btn {
+            font-size: 20px;
+            color: var(--color-gold);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0 80px;
+            text-align: center;
+            position: relative;
+            background: radial-gradient(circle at center, rgba(232, 213, 181, 0.2) 0%, rgba(253, 251, 247, 0) 70%);
+        }
+
+        .hero-avatar {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 30px;
+            border-radius: 50%;
+            border: 2px solid var(--color-gold);
+            padding: 6px;
+            position: relative;
+        }
+
+        .hero-avatar-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            color: var(--color-gold);
+            border: 1px solid var(--color-gold-light);
+        }
+
+        .sub-brand {
+            font-family: var(--font-serif);
+            font-size: 14px;
+            letter-spacing: 4px;
+            color: var(--color-gold);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: 2.8rem;
+            color: var(--color-burgundy);
+            line-height: 1.2;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .hero-subtitle-script {
+            font-family: var(--font-script);
+            font-size: 2.5rem;
+            color: var(--color-gold);
+            margin-top: -10px;
+            margin-bottom: 24px;
+        }
+
+        .hero-desc {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--color-text-dark);
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-tags {
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            color: var(--color-gold);
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .hero-author {
+            font-size: 0.95rem;
+            color: var(--color-text-muted);
+            margin-bottom: 40px;
+        }
+
+        /* Buttons & CTA */
+        .cta-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .btn-primary {
+            background-color: var(--color-burgundy);
+            color: #fff;
+            padding: 16px 36px;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(91, 29, 40, 0.2);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-burgundy-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(91, 29, 40, 0.3);
+        }
+
+        .btn-secondary-link {
+            color: var(--color-gold);
+            font-size: 1rem;
+            font-weight: 600;
+            border-bottom: 1px solid var(--color-gold);
+            padding-bottom: 2px;
+            transition: opacity 0.3s;
+        }
+
+        .btn-secondary-link:hover {
+            opacity: 0.8;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+            margin-bottom: 30px;
+        }
+
+        .hero-stats span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hero-stats i {
+            color: var(--color-gold);
+            font-size: 10px;
+        }
+
+        /* Social Icons */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .social-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            background-color: var(--color-gold);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+            background-color: var(--color-burgundy);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            padding: 60px 0;
+            background-color: var(--color-card-bg);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+            text-align: center;
+        }
+
+        .quote-symbol {
+            font-size: 2.5rem;
+            color: var(--color-burgundy);
+            line-height: 1;
+            margin-bottom: 10px;
+            font-family: var(--font-serif);
+        }
+
+        .quote-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--color-text-dark);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .quote-subtext {
+            font-family: var(--font-script);
+            font-size: 2rem;
+            color: var(--color-gold);
+        }
+
+        /* Services Grid */
+        .services-section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            letter-spacing: 2px;
+            color: var(--color-burgundy);
+            margin-bottom: 8px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            color: var(--color-gold);
+            text-transform: uppercase;
+            margin-bottom: 50px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .service-card {
+            background-color: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 30px 24px;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(197, 160, 89, 0.15);
+            border-color: var(--color-gold);
+        }
+
+        .card-num {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background-color: var(--color-gold);
+            color: #fff;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+
+        .card-title {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            color: var(--color-burgundy);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .card-icon {
+            font-size: 1.8rem;
+            color: var(--color-gold);
+        }
+
+        .card-list {
+            list-style: none;
+        }
+
+        .card-list li {
+            font-size: 0.95rem;
+            color: var(--color-text-muted);
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 14px;
+        }
+
+        .card-list li::before {
+            content: "•";
+            color: var(--color-gold);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--color-card-bg);
+            padding: 80px 0;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .contact-box {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid var(--color-border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            color: var(--color-text-dark);
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(197, 160, 89, 0.1);
+            color: var(--color-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .handle-tag {
+            text-align: center;
+            margin-top: 30px;
+            font-family: var(--font-sans);
+            font-size: 1.1rem;
+            color: var(--color-burgundy);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid var(--color-border);
+            background-color: var(--color-bg);
+        }
+
+        .footer-brand {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            letter-spacing: 3px;
+            color: var(--color-burgundy);
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .footer-sub {
+            font-size: 0.85rem;
+            color: var(--color-gold);
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+
+        .footer-copy {
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+        }
+
+        /* Scroll Arrow */
+        .scroll-down {
+            margin-top: 30px;
+            color: var(--color-gold);
+            font-size: 18px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-8px); }
+            60% { transform: translateY(-4px); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            .hero-subtitle-script {
+                font-size: 2rem;
+            }
+            .hero-desc {
+                font-size: 1.05rem;
+            }
+            .contact-box {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">GLOUCESTER</div>
+            <div class="menu-btn"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <!-- Profile Avatar Placeholder -->
+            <div class="hero-avatar">
+                <div class="hero-avatar-inner">
+                    <i class="fa-solid fa-user-ninja"></i>
+                </div>
+            </div>
+
+            <div class="sub-brand">SIGNATURE JINJU</div>
+            <h1 class="hero-title">Creating Meaning<br>Beyond Technology</h1>
+            <div class="hero-subtitle-script">Meaning Technology</div>
+
+            <p class="hero-desc">당신만의 시그니처 브랜드를 완성하는<br>콘텐츠 전략가</p>
+            <div class="hero-tags">CONTENT · BRANDING · MARKETING</div>
+            <p class="hero-author"><strong>전진주 PD</strong> · Global Content Strategist</p>
+
+            <div class="cta-group">
+                <a href="#contact" class="btn-primary">
+                    브랜드 스토리 시작하기 <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#services" class="btn-secondary-link">포트폴리오 둘러보기</a>
+            </div>
+
+            <div class="hero-stats">
+                <span><i class="fa-solid fa-diamond"></i> 500+ Projects</span>
+                <span><i class="fa-solid fa-diamond"></i> Since 2020</span>
+            </div>
+
+            <div class="social-links">
+                <a href="#" class="social-btn" title="Blog"><i class="fa-solid fa-blog"></i></a>
+                <a href="#" class="social-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-btn" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+            <div class="scroll-down">
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-symbol">“</div>
+            <p class="quote-text">
+                사람은 계획보다 이유로 움직입니다.<br>
+                기술에 온기를 담고,<br>
+                브랜드에 이야기를 담습니다.
+            </p>
+            <div class="quote-subtext">Meaningful Value Creator</div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2 class="section-title">ABOUT ME</h2>
+            <div class="section-subtitle">AI · CONTENT · BRANDING</div>
+
+            <div class="grid-container">
+                <!-- Card 1 -->
+                <div class="service-card">
+                    <div class="card-num">01</div>
+                    <div class="card-header">
+                        <div class="card-title">CONTENT</div>
+                        <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+                    </div>
+                    <ul class="card-list">
+                        <li>콘텐츠 기획</li>
+                        <li>블로그 · SNS</li>
+                        <li>숏폼 콘텐츠</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="service-card">
+                    <div class="card-num">02</div>
+                    <div class="card-header">
+                        <div class="card-title">BRANDING</div>
+                        <div class="card-icon"><i class="fa-solid fa-gem"></i></div>
+                    </div>
+                    <ul class="card-list">
+                        <li>퍼스널 · 기업 브랜딩</li>
+                        <li>브랜드 스토리 설계</li>
+                        <li>이미지 구축</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="service-card">
+                    <div class="card-num">03</div>
+                    <div class="card-header">
+                        <div class="card-title">CREATIVE</div>
+                        <div class="card-icon"><i class="fa-solid fa-camera"></i></div>
+                    </div>
+                    <ul class="card-list">
+                        <li>이미지 · 영상 제작</li>
+                        <li>음악 · 작사 프로젝트</li>
+                        <li>디자인 기획</li>
+                    </ul>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="service-card">
+                    <div class="card-num">04</div>
+                    <div class="card-header">
+                        <div class="card-title">BRAND MARKETING</div>
+                        <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    </div>
+                    <ul class="card-list">
+                        <li>브랜드 마케팅 전략</li>
+                        <li>SNS 마케팅 실행</li>
+                        <li>세일즈 퍼널 설계</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">CONTACT</h2>
+            <div class="section-subtitle">Let's Create Together</div>
+
+            <div class="contact-box">
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div>010-6560-3280</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div>lifehj0103@naver.com</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-globe"></i></div>
+                    <div>www.signaturejinju.com</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div>Seoul, Korea</div>
+                </div>
+
+                <div class="handle-tag">@signaturejinju</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-brand">GLOUCESTER</div>
+            <div class="footer-sub">글로스터 · AI · CONTENT · BRANDING</div>
+            <p class="footer-copy">© GLOUCESTER. Meaningful Value Creator Beyond Technology.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
