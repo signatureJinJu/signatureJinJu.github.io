@@ -92,6 +92,7 @@
             background: radial-gradient(circle at center, rgba(232, 213, 181, 0.2) 0%, rgba(253, 251, 247, 0) 70%);
         }
 
+        /* Avatar Image Styling */
         .hero-avatar {
             width: 140px;
             height: 140px;
@@ -106,13 +107,18 @@
             width: 100%;
             height: 100%;
             border-radius: 50%;
+            overflow: hidden;
             background: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 50px;
-            color: var(--color-gold);
             border: 1px solid var(--color-gold-light);
+        }
+
+        .hero-avatar-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .sub-brand {
@@ -509,10 +515,10 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <!-- Profile Avatar Placeholder -->
+            <!-- Profile Avatar with Signature Logo -->
             <div class="hero-avatar">
                 <div class="hero-avatar-inner">
-                    <i class="fa-solid fa-user-ninja"></i>
+                    <img src="signaturejinjuhead.png" alt="Signature Jinju Logo">
                 </div>
             </div>
 
